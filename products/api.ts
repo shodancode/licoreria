@@ -13,7 +13,7 @@ export default {
   list: async (): Promise<Product[]> => {
     return axios
       .get(
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQDP71ogt9TqCXAJv0oGv7KyHJGwrJb7Nv7iZzAMuPGJNfJFx-E8Xv5ZvhQCdxId94nA5Y-_OKRPSbS/pub?output=csv",
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vTFFhkafmk3Rd1mSSR3Zcfb96xuGWChgDIBlfwYEkgHNct5plKpqaXQxLYj_sXQVKt0t5JzfoK3Tqyi/pub?gid=868330863&single=true&output=csv",
         { responseType: "blob" }
       )
       .then(

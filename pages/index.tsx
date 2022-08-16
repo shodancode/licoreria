@@ -2,16 +2,16 @@ import { GetStaticProps } from "next";
 import React from "react";
 import api from "../products/api";
 import { Product } from "../products/types";
-import { Box, Button, Flex, Grid, Link, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Grid, Link, Stack, Text, Image } from "@chakra-ui/react";
 
 interface IndexPageProps {
   products: Product[];
 }
 
 function parseCurrency(value: number): string {
-  return `${value.toLocaleString("es-AR", {
+  return `${value.toLocaleString("es-PE", {
     style: "currency",
-    currency: "ARS",
+    currency: "PEN",
   })}`;
 }
 
@@ -49,6 +49,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ products }) => {
             backgroundColor="gray.100"
           >
             <Stack spacing={1} width="100%">
+              <Image src={product.image}></Image>
               <Text>{product.name}</Text>
               <Text fontSize="sm" color="green.500" fontWeight={500}>
                 {parseCurrency(product.price)}
@@ -78,7 +79,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ products }) => {
           <Button
             as={Link}
             colorScheme="whatsapp"
-            href={`https://wa.me/+541149178655?text=${encodeURIComponent(
+            href={`https://wa.me/+51913006451?text=Hola%20${encodeURIComponent(
               text
             )}`}
             isExternal
