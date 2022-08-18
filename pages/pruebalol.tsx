@@ -97,7 +97,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ products }) => {
   return (
     <Box p={4} align="center">
     <Stack>
-    <Tabs isFitted align="center" variant='enclosed >
+    <Tabs isFitted align="center" variant='enclosed'>
       
       <TabList boxSize="-moz-min-content" >
         <Tab _selected={{ color: 'white', bg: 'red.400' }}>Ofertas</Tab>
